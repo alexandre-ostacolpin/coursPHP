@@ -139,12 +139,109 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
+                            <th scope="row">$_SESSION</th>
+                            <td>Contient l'ensemble des noms des variables de session et leurs valeurs.</td>
                         </tr>
+                        
                     </tbody>
                 </table>
             </div>
+
+            <div class="col-sm-12">
+                <h2>Les opérateurs d'affectation combinés</h2>
+                <p>En plus de l'opérateur classique d'affectation =, il existe plusieurs opérateurs d'affectation combinée. Ces opérateurs réalisent à la fois une opération entre deux opérandes et l'affectation du résultat à l'opérande de gauche.</p>
+                <table class="table table-striped">
+					<thead>
+						<tr>
+						<th scope="col">Opérateur</th>
+						<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">+=</th>
+							<td>Addition puis affectation :<br>
+								$x += $y équivaut à $x = $x + $y<br>
+								$y peut être une expression complexe dont la valeur est un nombre.</td>
+						</tr>
+						<tr>
+							<th scope="row">-=</th>
+							<td>Soustraction puis affectation :<br>
+								$x -= $y équivaut à $x = $x - $y<br>
+								$y peut être une expression complexe dont la valeur est un nombre.</td>
+						</tr>
+						<tr>
+							<th scope="row">*=</th>
+							<td>$x *= $y équivaut à $x = $x * $y<br>
+							$y peut être une expression complexe dont la valeur est un nombre.</td>
+						</tr>
+						<tr>
+							<th scope="row">**=</th>
+							<td>Puissance puis affectation<br>
+							$x**=2 équivaut à $x=($x)²</td>
+						</tr>
+						<tr>
+							<th scope="row">/=</th>
+							<td>Division puis affectation :<br>
+							$x /= $y équivaut à $x = $x / $y<br>
+							$y peut être une expression complexe dont la valeur est un nombre différent de 0.</td>
+						</tr>
+						<tr>
+							<th scope="row">%=</th>
+							<td>Modulo puis affectation :<br>
+								$x %= $y équivaut à $x = $x % $y $y<br>
+								$y peut être une expression complexe dont la valeur est un nombre.</td>
+						</tr>
+						<tr>
+							<th scope="row">.=</th>
+							<td>Concaténation puis affectation :<br>
+								$x .= $y équivaut à $x = $x . $y<br>
+								$y peut être une expression littérale dont la valeur est une chaîne de caractères.</td>
+						</tr>
+					</tbody>
+				</table>
+            </div><!-- Fin de Col -->
+            <div class="col-sm-12">
+                <h5>5- Les constantes</h5>
+                <p>Vous serez parfois amené à utiliser de manière répétitive des informations devant rester constantes dans toutes les pages d'un même site. Il peut s'agir de texte ou de nombres qui reviennent souvent. Pour ne pas risquer l'écrasement accidentel de ces valeurs, qui pourrait se produire si elles étaient contenues dans des variables, vous avez tout intérêt à les enregistrer sous forme de constantes personnalisées.</p>
+				<p>On peut définir ses constantes soi-même cf. ; Pour définir des constantes personnalisées, utilisez la fonction define(), dont la syntaxe est la suivante : <strong>boolean define(string nom_cte, divers valeur_cte, boolean casse)</strong> Voir la page <a href="../exemples_pages/page_03.php">suivante</a></p>
+
+                <h3>Les constantes prédéfinies</h3>
+                <p>Il existe dans PHP un grand nombre de constantes prédéfinies, que vous pouvez notamment utiliser dans les fonctions comme paramètres permettant de définir des options. Nous ne pouvons les citer toutes tant elles sont nombreuses, mais nous les définirons au fur et à mesure de nos besoins. Voir la page <a href="../00-pages/04_constantes_predefinies.php">Avec un exemple</a></p>
+
+                <table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Constantes</th>
+								<th scope="col">Résultat</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">PHP_VERSION</th>
+							<td>Version de PHP installée sur le serveur :</td>
+							</tr>
+							<tr>
+							<th scope="row">PHP_OS</th>
+							<td>Nom du système d'exploitation du serveur :</td>
+							</tr>
+							<tr>
+							<th scope="row">DEFAULT_INCLUDE_PATH</th>
+							<td>Chemin d'accès aux fichiers par défaut :</td>
+							</tr>
+							<tr>
+							<th scope="row">__FILE__</th>
+							<td>Nom du fichier en cours d'exécution :</td>
+							</tr>
+							<tr>
+							<th scope="row">__LINE__</th>
+							<td>Numéro de la ligne en cours d'exécution :
+                            <?php echo "<p>Numéro de la ligne : n ".__LINE__."</p>"; ?>
+                            </td>   
+                            </tr>
+						</tbody>
+				</table>
+            </div><!-- Fin de Col -->
         </div><!-- Fin de row -->
 
     </main>
