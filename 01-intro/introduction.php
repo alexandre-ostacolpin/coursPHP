@@ -52,6 +52,15 @@
                     </code>
 
                 </blockquote>
+
+                <blockquote class="border border-warning w-50 p-2">
+                <code>
+                    &lt;?php
+					echo "&lt;?h3> Aujourd'hui le ". date('d/m/Y - H:m:s')."&lt;?/h3>&lt;?hr>";
+					echo "&lt;?h2>Bienvenue sur le site PHP 7<&lt;?/h2>";
+					?>
+                </code>
+				</blockquote>
             </div>
 
             <div class="col-sm-12 col-md-6">
@@ -68,7 +77,11 @@
                 </ul>
             </div>
         </div><!-- Fin de row -->
-
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="btn btn-secondary btn-sm-mb-2" href="../00-pages/01-page.php" role="button">Une page en php</a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-12">
                     <h2>Inclure des fichiers externes</h2>
@@ -82,16 +95,18 @@
 
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>include("nom_fichier.php")</td>
+                            <td>Lors de son interprétation par le serveur, cette ligne est remplacée par tout le contenu du fichier précisé en paramètre, dont vous fournissez le nom et éventuellement l'adresse complète. En cas d'erreur, par exemple si le fichier n'est pas trouvé, include() ne génère qu'une alerte (un warning), et le script continue.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>require("nom_fichier.php")</td>
+                            <td>A désormais un comportement identique à include(), à la différence près qu'en cas d'erreur, require() provoque une erreur fatale et met fin au script.</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>include_once("nom_fichier.php") <br>
+                                require_once("nom_fichier.php")
+                            </td>
+                            <td>Contrairement aux deux précédentes, ces fonctions ne sont pas exécutées plusieurs fois, même si elles figurent dans une boucle ou si elles ont déjà été exécutées une fois dans le code qui précède.</td>
                         </tr>
                     </tbody>
                 </table>
