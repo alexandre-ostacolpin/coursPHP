@@ -48,12 +48,42 @@
                     } else {
                         echo "$b qui est supérieur à $a";
                     }
+
+                    //Autre exemple de if else
+                    echo "<hr>";
+
+                    echo "<p class=\"alert alert-success w-75 mx-auto text-center\">";
+                    $e = 10;
+                    $f = 5;
+                    $g = 2;
+
+                    // L'opérateur OR qui s'écrit //
+                    if ( $e == 9 || $f > $g) {
+                        echo "Au moins une des deux conditions est remplie";
+                    } else {
+                        echo "Les deux conditions sont fausses";
+                    }
+                    echo "</p>";
                 ?>
-                <p>Le bloc qui suit les instructions if ou else peut contenir toutes sortes sortes d'instructions, y compris d'autres instructions <code>if...else</code>. Nous obtenons dans ce cas une syntaxe plus complexe, de la forme : A suivre</p>
+                <p>Le bloc qui suit les instructions if ou else peut contenir toutes sortes sortes d'instructions, y compris d'autres instructions <code>if...else</code></p>
+                <p>Il existe une autre manière d'écrire un if...else ; la condition ternaire ? ..?</p>
+                <p>Dans la ternaire le ? remplace le if et le : remplace le else</p>
+                <?php 
+                    // $h = 10;
+                    // if ( $h == 10 ){
+                    //     echo "$h est égal à 10";
+                    // } else {
+                    //     echo "$h est différent de 10";
+                    // }
+
+                    //La même en ternaire
+                    echo ( $h == 10 ) ? "$h est égal à 10" : "$h est différent de 10";// si $h est égal à 10, on affiche la première expression sinon la seconde
+                ?> 
             </div><!-- Fin de Col -->
 
             <div class="col-sm-12 col-md-4">
                 <h2>if...elseif...else</h2>
+                <p>Nous obtenons dans ce cas une syntaxe plus complexe, de la forme suivante :</p>
                 <?php
                 $d= 8;
                 echo "<p class=\"alert alert-success w-75 mx-auto text-center\">";

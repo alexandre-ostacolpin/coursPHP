@@ -38,7 +38,12 @@
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">03-conditions</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <a class="dropdown-item" href="../03-conditions/conditions.php">conditions</a>
-          
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GET et POST</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown04">
+          <a class="dropdown-item" href="../04-GET/method_get.php">GET</a>
+          <a class="dropdown-item" href="../05-POST/method_post.php">POST</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-md-0">
