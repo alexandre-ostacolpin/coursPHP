@@ -59,7 +59,7 @@ $entier = 500;
 
         echo "</p>";
 
-        //exo 850 €
+        //exo IF...ELSE IF...ELSE
         //Si vous achetez un PC à plus de 1000 euros, la remise est de 15%
         // Pour un PC de 1000 euros et moins la remise est de 10%
         //Si c'est un livre la remise est de 5%
@@ -81,10 +81,121 @@ $entier = 500;
             }elseif ($cat == "livre") {
                 echo "Livre remise 5% vous allez donc payer $remise5";
             } else {
-                echo "remise 2% vous allez donc payer $remise2";
+                echo "remise 2% vous allez donc payer $remise2 <br><hr>"; 
+            } 
+            
+        
+            //Boucle WHILE
+            //Les boucle sont destinées à répéter du code de façon automatique
+
+            $i = 0;
+            while ($i < 25){ // tant que c'est inférieur à 25 on incrémente $i
+                echo $i. " ** ";// affiche 0 ** 1 etc ...
+                $i++;
             }
-        
-        
+
+            echo "<hr>";
+
+            //mini exo 5
+            //dans une boucle faire les options d'un élément select en demarrant à 1920 et en s'arrêtant 2021
+
+            $annee = 1920;
+            echo "<label for=\"annee\">Années </label> <select>";
+            while ( $annee <= 2021 ){
+                echo "<option value=\"$annee\">" .$annee. "</option>";
+                $annee++;
+            }
+            echo "</select>";
+
+            echo "<hr>";
+
+           // mini exo 6 
+           // La même chose à rebours
+
+           $annee2 = 2021;
+            echo "<label for=\"annee\">Années </label> <select>";
+            while ( $annee2 >= 1920 ){
+                echo "<option value=\"$annee2\">" .$annee2. "</option>";
+                $annee2--;
+            }
+            echo "</select>";
+
+            echo "<hr>";
+
+            //DO WHILE  elle a comme particularité de s'exécuter au moins une fois, la condition est testée après un premier passage
+            $chamalow = 0; // Valeur de la boucle
+
+            do {
+                echo "<p>Je fais un petit tour de boucle.</p>";
+                $chamalow++;
+                // var_dump($chamalow);
+            }
+            while ( $chamalow > 10 );// La condition renvoie FALSE tout de suite, pourtant la boucle a tourné une fois !
+
+            echo "<hr>";
+
+            // mini exo 7
+            //si la variable $langue contient espagnol vous dite hola, si c'est anglais vous dites hello si c'est fr bonjour 
+
+            $langue = "Allemand";
+                switch ($langue){
+                    case "espagnol":
+                        echo "Hola";
+                        break;
+                    
+                    case "anglais":
+                        echo "Hello";
+                        break;
+                    
+                    case "Français":
+                        echo "Bonjour";
+                        break;
+                    
+                    default:
+                        echo "Moi pas comprendre";
+                        break;
+                }
+
+            echo "<hr>";
+
+            // ré-écrire ce switch avec if else if ...
+
+            
+
+            if ($langue == "Français") {
+                echo "Bonjour !";
+            } else if ( $langue == "Espagnol" ){
+                echo "Hola amigos !";
+            }else if ( $langue == "Italien" ){
+                echo "Ciao ragazza !";
+            }else {
+                echo "Langue inconnue";
+            }
+
+            echo "<hr>";
+
+            //mini exo 
+            //afficher les mois de 1 à 12 à l'aide d'une boucle for dans un menu déroulant
+
+            echo "<select>";
+                for($mois = 1; $mois <= 12; $mois++)
+                {
+                    echo "<option>  .$mois.  </option>";
+                }
+            echo "</select><br><br><br>"; 
+
+            echo "<hr>";
+
+            //mini exo
+            // Faire une boucle for qui affiche 0 a 9 sur la même ligne
+            // compléter cette boucle pour mettre les chiffres dans un tableau HTML
+
+            echo "<table border=\"1\"><tr>";
+                for($nombre = 0; $nombre <= 9; $nombre++)
+                {
+                    echo "<td>  $nombre  </td>";
+                }
+            echo "</tr></table><br><br>";
         ?>
     </main>
     <!-- Optional JavaScript; choose one of the two! -->

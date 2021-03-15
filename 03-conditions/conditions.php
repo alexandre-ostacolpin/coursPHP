@@ -101,6 +101,40 @@
             </div><!-- Fin de Col -->
         </div><!-- Fin de row -->
 
+                    <hr>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 border border-success">
+                <h2>Switch ... case</h2>
+
+                <?php 
+                    $dept = 41;
+                        switch ($dept) {
+                            case 75:
+                                echo "Paris";
+                                break;
+
+                            case 78:
+                                echo "Yvelines";
+                                break;
+
+                            case 92:
+                                echo "Hauts-de-Seine";
+                                break;
+                            
+                            default:
+                                echo "Dapartement inconnu en Ile de France !";
+                                break;
+                        }
+                    
+                ?> 
+            </div><!-- Fin de Col -->
+
+            <div class="col-sm-12 col-md-6">
+
+            </div><!-- Fin de Col -->
+        </div><!-- Fin de row -->
+
        
     </main>
 
