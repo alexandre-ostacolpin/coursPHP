@@ -114,6 +114,36 @@
                         }
                     }
 
+                    //1- EXO faire un tableau $tailles avec des tailles de vêtements du small au xl et les afficher avec une boucle foreach dans un ul
+                    //2- puis les afficher dans un select avec une boucle foreach 
+
+                    $tailles = [ 'small', 'meduim', 'xl', 'xll', 'xlll' ];
+
+                    echo "<ul class=\"w-50 bg-warning\">";
+                    foreach ( $tailles as $indice => $size ){
+                        echo "<li>" .$indice. " pour " .$size. "</li>";
+                    }
+                    echo "</ul>";
+
+                    // $tailles2 = [
+                    //     "s" => "small",
+                    //     "m" => "meduim",
+                    //     "l" => "large",
+                    //     "xl" => "extra-large",
+                    // ];
+
+                    // echo "<ul class=\"w-50 bg-warning\">";
+                    // foreach ( $tailles2 as $indice => $size ){
+                    //     echo "<li>" .$indice. " pour " .$size. "</li>";
+                    // }
+                    // echo "</ul>";
+
+                    echo "<select class=\"w-25 form-control\">";
+                    foreach ( $tailles as $indice => $size ){
+                        echo "<option>" .$indice. " pour " .$size. "</option>";
+                    }
+                    echo "</select>";
+
                 ?> 
             </div><!-- Fin de col -->
         </div><!-- Fin de row -->

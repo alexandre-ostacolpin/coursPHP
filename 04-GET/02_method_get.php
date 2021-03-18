@@ -21,19 +21,29 @@
 
     <main class="container bg-white">
         <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h2>$_GET[]</h2>
-                <p>Il s'agit d'une superglobale et comme toutes les superglobales, c'est un tableau.</p>
-                <p>Superglobale signifie que cette variable est disponible partout dans le script, y compris au sein des fonctions.</p>
-                <p>Les information transitent dans l'url selon la syntaxe suivante <code>mapage.php?indice1=valeur1&indiceN=valeurN</code></p>
-                <p>Et enfin quand on récupère les données, $_GET[] se remplit selon le chéma suivant : <code>$_GET = array('indice1' => 'valeur1', 'indiceN' => 'valeurN');</code></p>
+            <div class="col-sm-12">
+            <?php 
+                if(isset($_GET['article']) && isset($_GET['couleur']) && isset($_GET['prix'])) { // je fabrique la card si j'ai bien les contenus de mon array $_GET
+                echo $_GET['article'];
+            ?> 
+                <div class="card" style="width: 18rem;">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $_GET['article']; ?></h5>
+                        <p class="card-text"><?php echo $_GET['couleur']. "<br>" .$_GET['prix']. " €"; ?></p>
+                        <a href="panier.php" class="btn btn-primary">Mettre au panier</a>
+                        
+                    </div>
+                </div>
+                <?php 
+                } else { //sinon je fabrique un simple p
+                    echo "<p>Désolé il n'y a pas de produit sur cette page ! </p>";
+                }
+                ?>  
             </div><!-- Fin de col -->
 
             <div class="col-sm-12 col-md-6">
-                <!-- à partir du ? on envoie des information via l'url à la page 02_methode_get.php et elles sont receptionnée par la superglobale -->
-                <a href="02_method_get.php?article=jean&couleur=bleu&prix=55">Jean bleu</a>
-                <a href="02_method_get.php?article=robe&couleur=rouge&prix=75">Robe rouge</a>
-                <a href="02_method_get.php?article=pull&couleur=blanc&prix=45">Pull blanc</a>
+                
                 
             </div><!-- Fin de col -->
 

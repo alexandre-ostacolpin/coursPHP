@@ -12,6 +12,8 @@
     <title>Cours PHP 7 - Les tableaux</title>
   </head>
   <body>
+  <?php require '../inc/nav.inc.php'; ?>
+  
     <div class="jumbotron container">
         <h1 class="display-4">Cours PHP 7 - Les tableaux</h1>
         <p class="lead">Les tableaux représentent un type composé car ils permettent de stocker sous un même nom de variable plusieurs valeurs indépendantes d'un des types de base que vous venez de voir. C'est comme un tiroir divisé en compartiments. Chaque compartiment, que nous nommerons un élément du tableau, est repéré par un indice numérique (le premier ayant par défaut la valeur 0 et non 1). D'où l'expression de tableau indicé.</p>
