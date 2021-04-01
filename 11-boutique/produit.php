@@ -49,11 +49,11 @@ if ( !empty($_POST) ) {//Si form pas vide
                     ':code_postal' => $_POST['code_postal'],
                     ':ville' => $_POST['ville'],
             ));
-            if ($succes) {
-                $contenu .= '<div class="alert alert-success">Vous êtes inscrit <a href="connexion.php">Cliquez ici pour vous connecter</a></div>'; 
-            } else {
-                $contenu .= '<div class="alert alert-danger">Erreur lors de l`\enregistrement !</div>';
-            }//fin du if if if ($succes)
+                if ($succes) {
+                    $contenu .= '<div class="alert alert-success">Vous êtes inscrit <a href="connexion.php">Cliquez ici pour vous connecter</a></div>'; 
+                } else {
+                    $contenu .= '<div class="alert alert-danger">Erreur lors de l`\enregistrement !</div>';
+                }//fin du if if if ($succes)
             }//Fin de if else vérification du membre ou inscription
     } // Fin if empty($contenu)
 }// Fin if !empty($_POST)

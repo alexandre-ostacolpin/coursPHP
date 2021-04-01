@@ -57,6 +57,7 @@ if ( !empty($_POST) ) {//Si form pas vide
             }//Fin de if else vérification du membre ou inscription
     } // Fin if empty($contenu)
 }// Fin if !empty($_POST)
+
 ?> 
 <!doctype html>
 <html lang="fr">
